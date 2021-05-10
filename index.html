@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="icon" href="img/Codinglogo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <title>single page website</title>
+</head>
+<body>
+    <nav>
+        <div class="menu-icon">
+  <span class="fas fa-bars"></span></div>
+  <div>
+  <img src="img/Codinglogo.png" alt="logo" class="logoim"></div>
+  <div class="nav-items">
+    <li><a href="#">Home</a></li>
+    <li><a href="#about">About Us</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#blog">Blog</a></li>
+    <li><a href="#contact">Contact us</a></li>
+  </div>
+  <div class="search-icon">
+  <span class="fas fa-search"></span></div>
+  <div class="cancel-icon">
+  <span class="fas fa-times"></span></div>
+  <form action="#">
+          <input type="search" class="search-data" placeholder="Search" required>
+          <button type="submit" class="fas fa-search"></button>
+        </form>
+  </nav>
+  <div>
+    <img id="slider" src="img/CodingWa3.jpg" />
+</div>
+
+<div id="about">
+<h1>About us</h1>
+<p> My name is <span style="color: crimson;">Shivansh Patel </span> i am a
+<span style="color: crimson;">MERN STACK</span> devloper and a <span style="color: crimson;">JAVA</span> devloper<br>
+i love to devlop softwares and web applications
+</p>
+</div>
+
+<br>
+
+<h1 class="heading" id="gallery">Gallery</h1>
+<div id="gallery">
+<div class="gallery">
+      <img src="img/gallery/img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
+  </div>
+  
+  <div class="gallery">
+      <img src="img/gallery/img_forest.jpg" alt="Forest" width="600" height="400">
+  </div>
+  
+  <div class="gallery">
+      <img src="img/gallery/img_lights.jpg" alt="Northern Lights" width="600" height="400">
+  </div>
+  
+  <div class="gallery">
+      <img src="img/gallery/img_mountains.jpg" alt="Mountains" width="600" height="400">
+  </div>
+  </div>
+  
+  <br><br>
+  <h1 class="heading" id="blog">Blog</h1>
+  <br>
+<div class="details">
+
+<div class="card">
+<h1 style="color: crimson;">Flutter</h1>
+<img src="img/flutter.png" alt="flutter" height="80px" width="80px">
+<br><br>
+<p style="color: goldenrod;font-size: 18px;font-weight: bold;
+font-family: 'Baloo Bhai 2', cursive;">
+Flutter is a google's hybrid mobile application devlopment framework it 
+is used to make hybrid application 
+</p>
+</div>
+
+<div class="card">
+  <h1 style="color: crimson;">Android</h1>
+  <img src="img/android.png" alt="Android" height="80px" width="80px">
+  <br><br>  
+  <p style="color: goldenrod;font-size: 18px;font-weight: bold;
+font-family: 'Baloo Bhai 2', cursive;">
+Android is an Operating System which is based on Linux kernel
+Android have largest market share as a Operating System
+</p>
+</div>
+
+<div class="card">
+  <h1 style="color: crimson;">GitHub</h1>
+  <img src="img/github.png" alt="github" height="80px" width="80px">
+  <br><br>  
+  <p style="color: goldenrod;font-size: 18px;font-weight: bold;
+font-family: 'Baloo Bhai 2', cursive;">
+GitHub is a version control System which is used to track progress of your projects
+</p>  
+</div>
+
+</div>
+
+<br><br>
+<h1 class="heading" id="contact">Contact us</h1>
+<br><br>
+<center>
+         
+    <b>Email</b>
+    <br>
+    <input type="email" class="input" placeholder="example@example.com" id="email">
+    <br><br>
+    <b>Subject</b>
+    <br>
+    <input type="text" class="input" placeholder="your topic" id="subject">
+    <br><br>
+    <b>Message</b>
+    <br>
+    <textarea cols="30" rows="6" id="message" placeholder="write email and click on send button to send it" style="background: #14181f;color: #fff;"></textarea>
+    <br><br>
+    <input type="button" onclick="submit()" id="mbtn" value="Send email" />
+   <br><br>
+</center>
+  <footer class="name">
+    <a href="#">FAQ</a>
+    <a href="#">Contact Us</a>
+    <a href="#">Follow Us</a>
+    <a href="#">Terms of Use</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Refund Policy</a>
+    <a href="#">&copy; 2021 | Shivansh patel</a>
+  </footer>
+  <script>
+          const menuBtn = document.querySelector(".menu-icon span");
+    const searchBtn = document.querySelector(".search-icon");
+    const cancelBtn = document.querySelector(".cancel-icon");
+    const items = document.querySelector(".nav-items");
+    const form = document.querySelector("form");
+    menuBtn.onclick = ()=>{
+      items.classList.add("active");
+      menuBtn.classList.add("hide");
+      searchBtn.classList.add("hide");
+      cancelBtn.classList.add("show");
+    }
+    cancelBtn.onclick = ()=>{
+      items.classList.remove("active");
+      menuBtn.classList.remove("hide");
+      searchBtn.classList.remove("hide");
+      cancelBtn.classList.remove("show");
+      form.classList.remove("active");
+      cancelBtn.style.color = "#ff3d00";
+    }
+    searchBtn.onclick = ()=>{
+      form.classList.add("active");
+      searchBtn.classList.add("hide");
+      cancelBtn.classList.add("show");
+    }
+
+    var images = [
+            'img/abs.jpg',
+            'img/CodingWa3.jpg',
+            'img/DMC.jpg',
+            'img/p1.jpg',
+            'img/p2.jpg'
+        ];
+
+        var myVar = setInterval(next, 5000);
+
+        var num = 0;
+        function next() {
+            var slider = document.getElementById('slider');
+            num++;
+            if (num >= images.length) {
+                num = 0;
+            }
+            slider.src = images[num];
+        }
+
+
+        function submit()
+             {
+                var email=document.getElementById("email").value;
+                var subject=document.getElementById("subject").value;
+                var message=document.getElementById("message").value;
+
+                if (email === "" || subject ==="" || message==="") {
+                    alert("please fill all the input boxes");
+                } else {
+                    location.href="mailto:"+email+"?subject="+subject+"&body="+message;           
+                }
+                            
+             }
+  </script>
+</body>
+</html>
